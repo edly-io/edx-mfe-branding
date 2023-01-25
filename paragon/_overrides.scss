@@ -1,10 +1,23 @@
 // Use this file to define style overrides for @edx/paragon
 // This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
 
+@import '../index';
+
+a {
+    color: var(--primary);
+}
+a:hover,
+a:focus {
+    color: var(--primary-dark);
+}
+a:active {
+    color: var(--primary-light);
+}
+
 header.learning-header {
     padding-top: 8px;
     padding-bottom: 8px;
-    background: $primary;
+    background: var(--primary);
     color: $white;
 
     .text-gray-700 {
@@ -16,7 +29,24 @@ header.learning-header {
         border-color: $white;
 
         &:hover {
-            border-color: $primary;
+            color: var(--primary);
+            background: $white;
         }
+
+        &:active {
+            border-color: transparent !important;
+            background: $white !important;
+            color: $gray-700 !important;
+        }
+
+        &:focus::before {
+            border-color: $white;
+        }
+    }
+
+    .show > .btn-outline-primary.dropdown-toggle {
+        border-color: transparent !important;
+        background: $white !important;
+        color: $gray-700 !important;
     }
 }
