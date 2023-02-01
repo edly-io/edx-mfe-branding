@@ -17,12 +17,31 @@
   --gray-text: #666;
   --dark-text: #333;
   --dark-theme-bg: #333;
+  --focus-color: #035FC2;
   
   //--body-text: rgb(186, 11, 11);
   --body-text: #333;
   --theme-gray1: rgb(232, 232, 232);
   --theme-gray2: #cccccc;
   --light-gray: #FAFAFA;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 0px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline-offset: 2px;
+}
+
+.dropdown-menu a {
+  outline-offset: -2px;
+}
+
+.sidebarContainer a:focus {
+  outline-offset: 0;
 }
 
 .nav-underline-tabs .nav-link:hover, 
@@ -130,18 +149,34 @@ a.text-primary:focus {
   color: var(--white);
   border-color: var(--primary-light);
 }
+
+.btn-outline-primary.focus::before,
+.btn-outline-primary:focus::before,
+.btn-inverse-outline-primary.focus::before,
+.btn-inverse-outline-primary:focus::before,
+.btn-primary.focus::before, 
+.btn-primary:focus::before {
+  border-width: 3px;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+}
+
 .btn-primary.focus::before, 
 .btn-primary:focus::before,
+.btn-inverse-outline-primary.focus::before,
+.btn-inverse-outline-primary:focus::before,
 .btn-outline-primary.focus::before, 
 .btn-outline-primary:focus::before {
-  border-color: var(--primary);
+  border-color: var(--focus-color);
 }
 
 .btn-inverse-outline-primary:hover,
 .btn-icon.btn-icon-primary.focus, 
 .btn-icon.btn-icon-primary:focus,
 .btn-icon.btn-icon-primary {
-  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-icon.btn-icon-primary.focus, 

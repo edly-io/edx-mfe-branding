@@ -38,10 +38,6 @@ header.learning-header {
             background: $white !important;
             color: $gray-700 !important;
         }
-
-        &:focus::before {
-            border-color: $white;
-        }
     }
 
     .show > .btn-outline-primary.dropdown-toggle {
