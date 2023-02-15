@@ -62,12 +62,15 @@ $success: $green !default;
 $info: $teal !default;
 $danger: $red !default;
 $warning: $yellow !default;
-$light: #E1DDDB !default;
-$dark: #333333 !default;
 $accent-a: #00BBF9 !default;
 $accent-b: #FFEE88 !default;
+$light: #E1DDDB !default;
+$dark: #333333 !default;
+$dark-grey: #4D4D4D !default;
 $link-color: $primary !default;
 
+
+$body-color: $dark !default;
 
 // Typography
 //
@@ -78,5 +81,6 @@ $font-family-base: $font-family-sans-serif !default;
 
 $font-size-base: 1rem !default;
 $input-btn-font-size: $font-size-base;
+$headings-color: $dark-grey;
 
 $border-radius: 3px !default;

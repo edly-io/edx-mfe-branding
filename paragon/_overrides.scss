@@ -20,6 +20,30 @@ header.learning-header {
     background: var(--primary);
     color: $white;
 
+    .container-xl {
+        max-width: inherit;
+    }
+
+    .d-flex {
+        @media (max-width: $max-width-xs) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .logo {
+        @media (max-width: $max-width-xs) {
+            margin-right: auto !important;
+        }
+    }
+
+    .course-title-lockup {
+        @media (max-width: $max-width-xs) {
+            width: 100%;
+            order: 3;
+            margin-top: 8px;
+        }
+    }
+
     .text-gray-700 {
         color: $white !important;
     }
