@@ -3,13 +3,17 @@
   --primary-dark: #5C1F29;
   --primary-light: #B84848;
 
+  --primary-opacity-10: rgba(119, 36, 50, 0.1);
   // --primary: rgb(36, 119, 78);
   // --primary-dark: #11dbdf;
-  // --primary-light: #b8487e;
+  // --primary-light: #b8487e
+
 
   --secondary: rgb(0, 65, 101);
   --secondary-dark: #00293B;
   --secondary-light: #359BE0;
+
+  --ternary-lightBlue: #006094;
 
   --ternary: #666;
   --grey-shade1: #F5F5F5;
@@ -130,14 +134,27 @@ a.text-primary:focus {
   background-color: var(--primary) !important;
 }
 
+.modal .modal-footer button,
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
+
+  &:disabled,
+  &.disabled {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+  }
 }
 
 .btn-outline-primary {
   color: var(--primary);
   border-color: var(--primary);
+
+  &:disabled,
+  &.disabled {
+    color: var(--primary);
+  }
 }
 
 .btn-primary:hover,
@@ -219,13 +236,12 @@ a.text-primary:focus {
 .btn-secondary {
   background-color: var(--secondary);
   border-color: var(--secondary);
-  color: var(--dark);
+  color: var(--white);
 }
 
 .btn-outline-secondary {
   color: var(--secondary);
   border-color: var(--secondary);
-  color: var(--dark);
 }
 
 .btn-secondary:hover,
@@ -234,9 +250,9 @@ a.text-primary:focus {
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus,
 .btn-outline-secondary:focus {
-  border-color: var(--secondary);
   color: var(--white);
   background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active, 
@@ -246,8 +262,8 @@ a.text-primary:focus {
 .btn-outline-secondary:not(:disabled):not(.disabled).active, 
 .show > .btn-outline-secondary.dropdown-toggle {
   background: var(--secondary-light);
-  color: var(--dark);
   border-color: var(--secondary-light);
+  color: var(--white);
 }
 .btn-secondary.focus::before, 
 .btn-secondary:focus::before,
@@ -284,4 +300,30 @@ a.text-primary:focus {
 .sequence-navigation .btn.active:after,
 .pgn__menu-select-trigger-btn:hover {
   background-color: var(--primary);
+}
+
+.pgn__form-checkbox-input, 
+.pgn__form-radio-input, 
+.pgn__form-switch-input {
+  border: 1px solid var(--grey-shade2);
+  border-radius: 2px;
+
+  &:not(:disabled):hover {
+    box-shadow: none;
+  }
+  &:checked {
+    border-color: var(--ternary-lightBlue);
+  }
+}
+
+.pgn__form-checkbox-input {
+  &:checked {
+    background-image: url("data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z' fill='%23006094'/%3e%3c/svg%3e");
+  }
+}
+
+.btn.disabled, 
+.btn:disabled {
+  opacity: 0.25;
+  pointer-events: none;
 }
