@@ -2,30 +2,32 @@
   --primary: rgb(119, 36, 50);
   --primary-dark: #5C1F29;
   --primary-light: #B84848;
-
   --primary-opacity-10: rgba(119, 36, 50, 0.1);
-  // --primary: rgb(36, 119, 78);
-  // --primary-dark: #11dbdf;
-  // --primary-light: #b8487e
-
-
-  --secondary: rgb(0, 65, 101);
-  --secondary-dark: #00293B;
-  --secondary-light: #359BE0;
-
-  --ternary-lightBlue: #006094;
-
-  --ternary: #666;
-  --grey-shade1: #F5F5F5;
-  --grey-shade2: #E8E8E8;
-  --grey-text: #666;
-  --dark-grey: #333;
-  --dark-grey1: #4D4D4D;
-  --error: #AC1B1B;
+  --secondary: rgb(0, 96, 141);
+  --secondary-dark: #03415e;
+  --secondary-light: #0779ad;
+  --ternary: #E8E8E8;
+  --ternary-dark: #4D4D4D;
+  --ternary-light: #F5F5F5;
+  --body-text: #333;
+  --dark-grey: var(--body-text);
   --success: #157F5B;
+  --error: #AC1B1B;
+  --medium-grey: #CCCCCC;
+  --theme-grey: #666;
+  --theme-blue: #006094;
+  --tertiary2: #022A3A;
   --focus-color: #035FC2;
-  
-  --body-text: var(--dark-grey);
+  --tertiary4: #39C2D7;
+  --tertiary5: #81CAA0;
+  --tertiary6: #F2DF74;
+  --tertiary7: #D6B430;
+  --tertiary8: #DD8676;
+  --tertiary9: #781327;
+  --tertiary10: #3B0104;
+  --tertiary11: #A93439;
+  --tertiary12: #A9B2B1;
+  --fontFamilyLato: "Lato","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 body {
@@ -67,8 +69,23 @@ a:focus-visible {
   border-bottom-color: var(--primary);
 }
 .btn-link {
-  color: var(--primary);
+  color: var(--secondary);
+
+  &:hover {
+    color: var(--secondary-dark);
+  }
+
+  &:active {
+    color: var(--secondary-light);
+  }
 }
+a {
+  color: var(--secondary);
+}
+a:hover {
+  color: var(--secondary-dark);
+}
+
 a.text-primary-500:hover,
 a.text-primary-500:focus,
 a.text-primary:hover, 
@@ -222,6 +239,46 @@ a.text-primary:focus {
   box-shadow: inset 0 0 0 2px var(--primary);
 }
 
+
+.btn-icon.btn-icon-inverse-primary-active.hover, 
+.btn-icon.btn-icon-inverse-primary-active:hover, 
+.btn-icon.btn-icon-inverse-primary-active.active, 
+.pgn__tab_more.nav-link.active .dropdown .btn-icon.btn-icon-inverse-primary-active.dropdown-toggle, 
+.btn-icon.btn-icon-inverse-primary-active:active,
+.btn-icon.btn-icon-inverse-primary-active {
+  color: var(--primary);
+}
+
+.btn-link:hover {
+  color: var(--primary-dark);
+}
+
+.pgn__breadcrumb .list-inline-item a.link-muted:focus::before,
+.pgn__form-checkbox-input:focus::before, 
+.pgn__form-radio-input:focus::before,
+.pgn__form-checkbox-input:checked, 
+.pgn__form-radio-input:checked, 
+.pgn__form-switch-input:checked {
+  border-color: var(--primary);
+}
+
+.pgn__form-radio-input:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23772432'/%3e%3c/svg%3e");
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.nav-tabs .nav-link.active, 
+.nav-tabs .pgn__tab_more.nav-link.active .dropdown .dropdown-toggle, 
+.pgn__tab_more.nav-link.active .dropdown .nav-tabs .dropdown-toggle, 
+.nav-tabs .nav-item.show .nav-link {
+  color: var(--primary);
+  border-color: transparent transparent var(--primary);
+}
+
 /*===== END Primary Btn Style ========*/
 
 /*===== Start Secondary Btn Style ========*/
@@ -305,14 +362,14 @@ a.text-primary:focus {
 .pgn__form-checkbox-input, 
 .pgn__form-radio-input, 
 .pgn__form-switch-input {
-  border: 1px solid var(--grey-shade2);
+  border: 1px solid var(--ternary);
   border-radius: 2px;
 
   &:not(:disabled):hover {
     box-shadow: none;
   }
   &:checked {
-    border-color: var(--ternary-lightBlue);
+    border-color: var(--theme-blue);
   }
 }
 
