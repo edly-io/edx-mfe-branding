@@ -2,22 +2,18 @@
   --primary: rgb(119, 36, 50);
   --primary-dark: #5C1F29;
   --primary-light: #B84848;
-  --primary-opacity-10: rgba(119, 36, 50, 0.1);
   --secondary: rgb(0, 96, 141);
   --secondary-dark: #03415e;
   --secondary-light: #0779ad;
-  --ternary: #E8E8E8;
-  --ternary-dark: #4D4D4D;
-  --ternary-light: #F5F5F5;
-  --body-text: #333;
-  --dark-grey: var(--body-text);
   --success: #157F5B;
   --error: #AC1B1B;
-  --medium-grey: #CCCCCC;
-  --theme-grey: #666;
-  --theme-blue: #006094;
+  --grey-tint1: #F5F5F5;
+  --grey-tint2: #E8E8E8;
+  --grey-shade1: #4D4D4D;
+  --grey-shade2: #333333;
+  --tertiary1: #006094;
   --tertiary2: #022A3A;
-  --focus-color: #035FC2;
+  --tertiary3: #035FC2;
   --tertiary4: #39C2D7;
   --tertiary5: #81CAA0;
   --tertiary6: #F2DF74;
@@ -27,7 +23,10 @@
   --tertiary10: #3B0104;
   --tertiary11: #A93439;
   --tertiary12: #A9B2B1;
-  --fontFamilyLato: "Lato","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --focus-color: var(--tertiary3);
+  --body-text: var(--grey-shade2);
+  --fontFamilyLato: var(--fontFamilyLato);
+  --fontFamilyRoboto: var(--fontFamilyRoboto);
 }
 
 body {
@@ -351,7 +350,7 @@ a.text-primary:focus {
 /*===== END Secondary Btn Style ========*/
 
 .bg-ternary {
-  background: var(--ternary) !important;
+  background: var(--grey-shade1) !important;
 }
 
 .sequence-navigation .btn.active:after,
@@ -362,14 +361,14 @@ a.text-primary:focus {
 .pgn__form-checkbox-input, 
 .pgn__form-radio-input, 
 .pgn__form-switch-input {
-  border: 1px solid var(--ternary);
+  border: 1px solid var(--grey-tint2);
   border-radius: 2px;
 
   &:not(:disabled):hover {
     box-shadow: none;
   }
   &:checked {
-    border-color: var(--theme-blue);
+    border-color: var(--tertiary1);
   }
 }
 
