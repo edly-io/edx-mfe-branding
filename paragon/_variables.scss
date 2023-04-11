@@ -66,7 +66,7 @@ $accent-a: #00BBF9 !default;
 $accent-b: #FFEE88 !default;
 $light: #E1DDDB !default;
 $dark: #333333 !default;
-$dark-grey: #4D4D4D !default;
+$grey-shade1: #4D4D4D !default;
 $link-color: $primary !default;
 
 
@@ -75,15 +75,38 @@ $body-color: $dark !default;
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: var(--fontFamilyLato) !default;
-$font-family-serif: serif !default;
-$font-family-base: $font-family-sans-serif !default;
+$font-family-sans-serif:      var(--fontFamilyLato) !default;
+$font-family-serif:           serif !default;
+$font-family-base:            $font-family-sans-serif !default;
 
-$font-size-base: 1rem !default;
-$input-btn-font-size: $font-size-base;
-$headings-color: $dark-grey;
+$font-size-base:              1rem !default;
+$input-btn-font-size:         14px !default;
+$line-height-base:            1.5556 !default;
+
+$h1-font-size:                1.75em !default;
+$h2-font-size:                1.5em !default;
+$h3-font-size:                1.25em !default;
+$h4-font-size:                1em !default;
+$h5-font-size:                0.875em !default;
+$h6-font-size:                0.75rem !default;
+
+$h1-mobile-font-size:         $h2-font-size !default;
+$h2-mobile-font-size:         $h3-font-size !default;
+$h3-mobile-font-size:         $h4-font-size !default;
+$h4-mobile-font-size:         $h5-font-size !default;
+$h5-mobile-font-size:         $h6-font-size !default;
+$h6-mobile-font-size:         $h6-font-size !default;
+
+$headings-line-height:        1.25 !default;
+$headings-color:              $dark !default;
+
 
 $border-radius: 3px !default;
 
-// Remove this only for testing
-$max-width-xs: 400px !default;
+$max-width-xxs: 0px !default;
+$max-width-xs: 475px !default;
+$max-width-sm: 600px !default;
+$max-width-md: 900px !default;
+$max-width-lg: 1200px !default;
+$max-width-xl: 1400px !default;
+$max-width-xxl: 1600px !default;
