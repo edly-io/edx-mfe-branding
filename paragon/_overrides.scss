@@ -36,14 +36,6 @@ header.learning-header {
         }
     }
 
-    .course-title-lockup {
-        @media (max-width: $max-width-xs) {
-            width: 100%;
-            order: 3;
-            margin-top: 8px;
-        }
-    }
-
     .text-gray-700 {
         color: $white !important;
     }
