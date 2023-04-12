@@ -2,8 +2,8 @@
   --primary: rgb(119, 36, 50);
   --primary-dark: #5C1F29;
   --primary-light: #B84848;
-  --secondary: rgb(0, 96, 141);
-  --secondary-dark: #03415e;
+  --secondary: #004165;
+  --secondary-dark: #00293B;
   --secondary-light: #0779ad;
   --success: #157F5B;
   --error: #AC1B1B;
@@ -27,6 +27,7 @@
   --body-text: var(--grey-shade2);
   --fontFamilyLato: var(--fontFamilyLato);
   --fontFamilyRoboto: var(--fontFamilyRoboto);
+  --primary-opacity-10: rgba(119, 36, 50, 0.1);
 }
 
 body {
@@ -35,10 +36,28 @@ body {
   line-height: 24px;
   font-size: 0.875em;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media (min-width: $max-width-sm) {
     font-size: 1em;
   }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--grey-tint2);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border: 0px solid transparent;
 }
 
 h1 {
