@@ -30,6 +30,12 @@
   --primary-opacity-10: rgba(119, 36, 50, 0.1);
 }
 
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--grey-tint1);
+}
+
 body {
   min-width: 320px;
   color: var(--body-text);
