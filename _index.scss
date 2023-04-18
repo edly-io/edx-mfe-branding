@@ -159,13 +159,11 @@ h6 {
   }
 }
 
-button:focus:not(:focus-visible),
 *:focus-visible {
   outline: 3px solid var(--focus-color);
   outline-offset: 0px;
 }
 
-button:focus:not(:focus-visible),
 button:focus-visible {
   outline-offset: 3px;
 }
