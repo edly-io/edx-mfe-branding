@@ -4,14 +4,14 @@
 @import '../index';
 
 a {
-    color: var(--primary);
+    color: var(--secondary);
 }
 a:hover,
 a:focus {
-    color: var(--primary-dark);
+    color: var(--secondary-dark);
 }
 a:active {
-    color: var(--primary-light);
+    color: var(--secondary-light);
 }
 
 header.learning-header {
