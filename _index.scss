@@ -2,9 +2,9 @@
   --primary: rgb(119, 36, 50);
   --primary-dark: #5C1F29;
   --primary-light: #B84848;
-  --secondary: #004165;
+  --secondary: #006094;
   --secondary-dark: #00293B;
-  --secondary-light: #0779ad;
+  --secondary-light: #004165;
   --success: #157F5B;
   --error: #AC1B1B;
   --grey-tint1: #F5F5F5;
@@ -33,7 +33,7 @@
 * {
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: var(--primary) var(--grey-tint1);
+  scrollbar-color: var(--grey-shade2) var(--grey-tint1);
 }
 
 body {
@@ -63,8 +63,9 @@ body {
   background-color: var(--grey-tint2);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
+  background-color: var(--grey-shade2);
   border: 0px solid transparent;
+  border-radius: 3px;
 }
 
 h1 {
@@ -206,6 +207,9 @@ a:focus-visible {
   &:active {
     color: var(--secondary-light);
   }
+}
+.btn-link:not(.text-primary) {
+  text-decoration: underline;
 }
 a {
   color: var(--secondary);
