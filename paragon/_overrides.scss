@@ -78,9 +78,10 @@ header.learning-header {
             font-size: 14px;
 
             &:hover,
+            &:active,
             &:focus {
                 color: var(--secondary-dark);
-                background: var(--grey-tint1);
+                background: var(--grey-tint1) !important;
             }
         }
     }
