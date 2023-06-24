@@ -76,6 +76,7 @@ header.learning-header {
             color: var(--grey-shade2);
             font-weight: 700;
             font-size: 14px;
+            line-height: 22px;
 
             &:hover,
             &:active,
@@ -90,5 +91,11 @@ header.learning-header {
         background: var(--grey-tint1);
         border-color: var(--grey-tint1);
         color: var(--grey-shade2);
+    }
+
+    .btn-inverse-outline-primary {
+        &:focus {
+            color: $white;
+        }
     }
 }
