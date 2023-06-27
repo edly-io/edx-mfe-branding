@@ -84,6 +84,17 @@ header.learning-header {
                 color: var(--secondary-dark);
                 background: var(--grey-tint1) !important;
             }
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: none;
+            }
+
+            &:nth-child(5):hover,
+            &:nth-child(5) {
+                color: var(--error);
+            }
         }
     }
 
