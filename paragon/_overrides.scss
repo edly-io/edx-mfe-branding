@@ -65,6 +65,7 @@ header.learning-header {
         }
     }
 
+    .app-menu-wrapper, 
     .user-dropdown {
         .dropdown-menu {
             min-width: 190px;
@@ -84,7 +85,11 @@ header.learning-header {
                 color: var(--secondary-dark);
                 background: var(--grey-tint1) !important;
             }
+        }
+    }
 
+    .user-dropdown {
+        .dropdown-item {
             &:nth-child(2),
             &:nth-child(3),
             &:nth-child(4) {
