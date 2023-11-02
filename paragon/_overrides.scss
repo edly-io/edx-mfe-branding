@@ -52,6 +52,7 @@ header.learning-header {
         color: var(--grey-shade2);
         border-color: $white;
         font-size: 15px;
+        text-transform: capitalize;
 
         &:focus,
         &:hover {
@@ -113,5 +114,24 @@ header.learning-header {
         &:focus {
             color: $white;
         }
+    }
+}
+
+footer.app-footer {
+    padding: 15px 0;
+    text-align: center;
+    background: var(--white);
+    border-top: 1px solid var(--grey-tint2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+
+    p {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.43;
     }
 }
